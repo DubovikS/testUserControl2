@@ -6,6 +6,7 @@
 <html>
 <head>
     <title>Users</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
@@ -15,6 +16,7 @@
       margin: 0;
       padding: 0;
       height: 100%;
+      width: 100%;
       background: -webkit-radial-gradient(center, circle farthest-corner, rgba(255,255,255,0) 50%, rgba(200,200,200,1)), -webkit-radial-gradient(center, circle, rgba(255,255,255,.35), rgba(255,255,255,0) 20%, rgba(255,255,255,0) 21%), -webkit-radial-gradient(center, circle, rgba(0,0,0,.2), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 21%), -webkit-radial-gradient(center, circle farthest-corner, #f0f0f0, #c0c0c0);
       background: -moz-radial-gradient(center, circle farthest-corner, rgba(255,255,255,0) 50%, rgba(200,200,200,1)), -moz-radial-gradient(center, circle, rgba(255,255,255,.35), rgba(255,255,255,0) 20%, rgba(255,255,255,0) 21%), -moz-radial-gradient(center, circle, rgba(0,0,0,.2), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 21%), -moz-radial-gradient(center, circle farthest-corner, #f0f0f0, #c0c0c0);
       background: radial-gradient(center, circle farthest-corner, rgba(255,255,255,0) 50%, rgba(200,200,200,1)), radial-gradient(center, circle, rgba(255,255,255,.35), rgba(255,255,255,0) 20%, rgba(255,255,255,0) 21%), radial-gradient(center, circle, rgba(0,0,0,.2), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 21%), radial-gradient(center, circle farthest-corner, #f0f0f0, #c0c0c0);
@@ -38,6 +40,8 @@
       font-size: x-large;
       text-align: center;
       font-family: initial;
+
+      position:relative;
     }
     h2{
       color: ghostwhite;
@@ -57,7 +61,27 @@
       text-align: center;
     }
     .header{
+      width: 98%;
+      float: left;
+      padding: 1%;
       background :#77afda;
+      border-bottom: 2px;
+    }
+
+    @media screen and (max-width:490px){
+      th {
+        color: crimson;
+        font-size: larger;
+        text-align: center;
+        font-family: cursive;
+      }
+      td{
+        font-size: large;
+        text-align: center;
+        font-family: initial;
+
+        position:relative;
+      }
     }
   </style>
 </head>
@@ -90,17 +114,15 @@
     </tr>
     <c:forEach items="${listUsers}" var="user">
       <tr>
-        <td>${user.firstName}</td>
-        <td>${user.secondName}</td>
-        <td>inside</td>
+        <td data-label="First Name">${user.firstName}</td>
+        <td data-label="Second Name">${user.secondName}</td>
+        <td data-label="Status">inside</td>
       </tr>
     </c:forEach>
   </table>
 </div>
 </c:if>
-  <div class="footer">
-    Footer
-  </div>
+
 </div>
 </body>
 </html>

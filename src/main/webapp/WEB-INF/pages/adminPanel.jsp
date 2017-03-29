@@ -6,6 +6,7 @@
 <html>
 <head>
     <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
@@ -101,7 +102,7 @@
       font-family: cursive;
     }
     h2{
-      color: ghostwhite;
+      color: #2f6736;
       text-align: center;
     }
     td{
@@ -113,11 +114,32 @@
       color: mediumblue;
 
     }
+    a{
+      text-decoration:none;
+      -webkit-transition: all.6s ease;
+      color:darkblue;
+      font-size: 17;
+    }
+    @media screen and (max-width:540px){
+      th {
+        color: crimson;
+        font-size: initial;
+        text-align: center;
+        font-family: cursive;
+      }
+      td{
+        font-size: large;
+        text-align: center;
+        font-family: initial;
+
+        position:relative;
+      }
+    }
   </style>
 </head>
 <body>
 
-<h1>Admin Panel</h1>
+<h2>Admin Panel</h2>
 <c:if test="${!empty listUsers}">
   <table class="table table-hover">
     <tr>
