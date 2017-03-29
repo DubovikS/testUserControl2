@@ -61,10 +61,11 @@
       text-align: center;
     }
     .header{
+      color: navy;
       width: 98%;
       float: left;
       padding: 1%;
-      background :#77afda;
+      background :#dadada;
       border-bottom: 2px;
     }
 
@@ -88,9 +89,9 @@
 <body>
 <div class="wrapper">
 <div class="header">
-  HEADER
+  Big brother is watching you...
 </div>
-
+  <br/>
 <h2>
 <form action="/adminPanel" class="form-inline" method="post">
   <div class="form-group">
@@ -98,7 +99,7 @@
     <p class="form-control-static">Admin panel</p>
   </div>
   <div class="form-group">
-    <label for="inputPassword2" class="sr-only">Password</label>
+    <label for="inputPassword2" class="sr-only">admin</label>
     <input type="password" class="form-control" id="inputPassword2" name="passwordInput" placeholder="Password">
   </div>
   <button type="submit" class="btn btn-primary">Confirm identity</button>

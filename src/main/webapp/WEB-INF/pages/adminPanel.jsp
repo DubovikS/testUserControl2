@@ -95,6 +95,14 @@
       0% { transform:rotate(0deg); }
       100% { transform:rotate(-360deg); }
     }
+    .header{
+      color: navy;
+      width: 98%;
+      float: left;
+      padding: 1%;
+      background :#dadada;
+      border-bottom: 2px;
+    }
     th {
       color: crimson;
       font-size: xx-large;
@@ -138,6 +146,10 @@
   </style>
 </head>
 <body>
+<div class="header">
+  Hello Big brother!
+</div>
+<br/>
 
 <h2>Admin Panel</h2>
 <c:if test="${!empty listUsers}">
@@ -154,7 +166,16 @@
         <td>${user.id}</td>
         <td>${user.firstName}</td>
         <td>${user.secondName}</td>
-        <td>${user.status}</td>
+        <td>
+          <c:choose>
+          <c:when test="${user.status == '1'}">
+           inside
+          </c:when>
+          <c:when test="${user.status == '0'}">
+            outside
+          </c:when>
+          </c:choose>
+        </td>
         <td>${user.cardNumber}</td>
       </tr>
     </c:forEach>
