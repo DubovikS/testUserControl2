@@ -29,14 +29,23 @@
       font-family: cursive;
     }
     th {
-      color: snow;
+      color: crimson;
+      font-size: xx-large;
+      text-align: center;
     }
-
+    td{
+      font-size: x-large;
+      text-align: center;
+    }
+    h2{
+      color: ghostwhite;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
 
-
+<h2>
 <form action="/adminPanel" class="form-inline" method="post">
   <div class="form-group">
     <label class="sr-only">Email</label>
@@ -46,9 +55,9 @@
     <label for="inputPassword2" class="sr-only">Password</label>
     <input type="password" class="form-control" id="inputPassword2" name="passwordInput" placeholder="Password">
   </div>
-  <button type="submit" class="btn btn-default">Confirm identity</button>
+  <button type="submit" class="btn btn-primary">Confirm identity</button>
 </form>
-
+</h2>
 <c:if test="${!empty listUsers}">
 <div class="table-responsive">
   <table class="table table-hover">

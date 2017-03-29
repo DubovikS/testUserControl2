@@ -95,11 +95,21 @@
       100% { transform:rotate(-360deg); }
     }
     th {
-      color: snow;
+      color: crimson;
+      font-size: xx-large;
+      text-align: center;
     }
     h2{
       color: ghostwhite;
       text-align: center;
+    }
+    td{
+      font-size: x-large;
+      text-align: center;
+    }
+    table{
+      color: mediumblue;
+      font-family: cursive;
     }
   </style>
 </head>
