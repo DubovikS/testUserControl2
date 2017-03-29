@@ -94,5 +94,10 @@
     <orderEntry type="library" name="Maven: com.sparkjava:spark-template-freemarker:2.3" level="project" />
     <orderEntry type="library" name="Maven: org.freemarker:freemarker:2.3.19" level="project" />
     <orderEntry type="library" name="Maven: com.heroku.sdk:heroku-jdbc:0.1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.retry:spring-retry:1.2.0.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.aspectj:aspectjlib:1.6.2" level="project" />
+    <orderEntry type="library" name="Maven: org.aspectj:aspectjrt:1.8.10" level="project" />
+    <orderEntry type="library" name="Maven: org.aspectj:aspectjtools:1.8.10" level="project" />
+    <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.8.10" level="project" />
   </component>
 </module>

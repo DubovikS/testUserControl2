@@ -56,6 +56,11 @@
           <element id="library" level="project" name="Maven: com.sparkjava:spark-template-freemarker:2.3" />
           <element id="library" level="project" name="Maven: org.freemarker:freemarker:2.3.19" />
           <element id="library" level="project" name="Maven: com.heroku.sdk:heroku-jdbc:0.1.1" />
+          <element id="library" level="project" name="Maven: org.springframework.retry:spring-retry:1.2.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjlib:1.6.2" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjrt:1.8.10" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjtools:1.8.10" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.8.10" />
         </element>
       </element>
       <element id="directory" name="META-INF">

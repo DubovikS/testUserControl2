@@ -4,6 +4,9 @@ import com.springapp.model.User;
 import com.springapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.retry.annotation.Backoff;
+import org.springframework.retry.annotation.EnableRetry;
+import org.springframework.retry.annotation.Retryable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
+@EnableRetry
 public class AdminController {
 
     @Autowired
@@ -27,6 +31,7 @@ public class AdminController {
         return userService;
     }
 
+    @Retryable(maxAttempts = 10, value = RuntimeException.class, backoff = @Backoff(delay = 500, multiplier = 2))
     @RequestMapping(value = "adminPanel", method = RequestMethod.POST)
     public String listUsers(@RequestParam("passwordInput") String password, Model model){
         model.addAttribute("user", new User());
