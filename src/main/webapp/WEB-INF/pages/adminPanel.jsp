@@ -114,10 +114,7 @@
   </style>
 </head>
 <body>
-<div class="preloader">
-  <div class="loadersmall"></div>
-  <div class="loaderbig"></div>
-</div>
+
 <h1>Admin Panel</h1>
 <c:if test="${!empty listUsers}">
   <table class="table table-hover">
