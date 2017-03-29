@@ -98,6 +98,7 @@
       color: crimson;
       font-size: xx-large;
       text-align: center;
+      font-family: cursive;
     }
     h2{
       color: ghostwhite;
@@ -106,10 +107,11 @@
     td{
       font-size: x-large;
       text-align: center;
+      font-family: initial;
     }
     table{
       color: mediumblue;
-      font-family: cursive;
+
     }
   </style>
 </head>

@@ -5,7 +5,7 @@
 <%@ page session="false" %>
 <html>
 <head>
-    <title></title>
+    <title>Users</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
@@ -26,24 +26,46 @@
     }
     table{
       color: mediumblue;
-      font-family: cursive;
+
     }
     th {
       color: crimson;
       font-size: xx-large;
       text-align: center;
+      font-family: cursive;
     }
     td{
       font-size: x-large;
       text-align: center;
+      font-family: initial;
     }
     h2{
       color: ghostwhite;
       text-align: center;
     }
+    .wrapper{
+      margin: 0 auto;
+      padding-bottom: 100px;
+    }
+    .footer{
+      background :#da9077;
+      position: absolute;
+      bottom: 0;
+      width:100%;
+      height: 80px;
+      color: #ccc;
+      text-align: center;
+    }
+    .header{
+      background :#77afda;
+    }
   </style>
 </head>
 <body>
+<div class="wrapper">
+<div class="header">
+  HEADER
+</div>
 
 <h2>
 <form action="/adminPanel" class="form-inline" method="post">
@@ -76,5 +98,9 @@
   </table>
 </div>
 </c:if>
+  <div class="footer">
+    Footer
+  </div>
+</div>
 </body>
 </html>
