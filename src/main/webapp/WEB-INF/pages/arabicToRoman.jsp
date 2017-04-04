@@ -7,7 +7,6 @@
 <head>
     <title></title>
 </head>
-<>
 Hello! Enter the number > 0 and <4000
   <form name="formArabic" method="post" action="/arabicToRoman">
     <br/>
@@ -23,6 +22,7 @@ Hello! Enter the number > 0 and <4000
   <c:if test="${!empty clientIp}">
     You IP: ${clientIp}
   </c:if>
-
+<br/>
+  <a href="/users">Back to Users</a>
 </body>
 </html>
