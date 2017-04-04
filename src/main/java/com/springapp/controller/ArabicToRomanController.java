@@ -18,13 +18,17 @@ public class ArabicToRomanController {
 
     @Retryable(maxAttempts = 10, value = RuntimeException.class, backoff = @Backoff(delay = 10, multiplier = 2))
     @RequestMapping(value = "arabicToRoman", method = RequestMethod.GET)
-    public String arabicToRomanGet(Model model){
+    public String arabicToRomanGet(Model model, HttpServletRequest httpServletRequest){
+        String clientIp = httpServletRequest.getRemoteAddr();
+        model.addAttribute("clientIp", clientIp);
         return "arabicToRoman";
     }
 
     @Retryable(maxAttempts = 10, value = RuntimeException.class, backoff = @Backoff(delay = 10, multiplier = 2))
     @RequestMapping(value = "arabicToRoman", method = RequestMethod.POST)
-    public String arabicToRomanPost(Model model,@RequestParam Integer arabicNumber){
+    public String arabicToRomanPost(Model model,@RequestParam Integer arabicNumber, HttpServletRequest httpServletRequest){
+        String clientIp = httpServletRequest.getRemoteAddr();
+        model.addAttribute("clientIp", clientIp);
         if(arabicNumber >= 0 && arabicNumber < 4000) {
             ConverterToRomanService converterToRoman = new ConverterToRomanService();
             String result = converterToRoman.ConvertToArabic(arabicNumber);
