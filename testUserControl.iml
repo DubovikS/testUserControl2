@@ -43,7 +43,6 @@
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 8.0.29" level="application_server_libraries" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:4.0.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:4.0.3.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:4.0.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-core:4.0.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:4.0.3.RELEASE" level="project" />
@@ -99,5 +98,9 @@
     <orderEntry type="library" name="Maven: org.aspectj:aspectjrt:1.8.10" level="project" />
     <orderEntry type="library" name="Maven: org.aspectj:aspectjtools:1.8.10" level="project" />
     <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.8.10" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-core:4.2.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-web:4.2.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-config:4.2.1.RELEASE" level="project" />
   </component>
 </module>

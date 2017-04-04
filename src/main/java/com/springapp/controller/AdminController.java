@@ -54,6 +54,7 @@ public class AdminController {
         return "users";
     }
 
+    @Retryable(maxAttempts = 10, value = RuntimeException.class, backoff = @Backoff(delay = 10, multiplier = 2))
     @RequestMapping(value = "adminPanel", method = RequestMethod.GET)
     public String listUsers(Model model){
         model.addAttribute("user", new User());
