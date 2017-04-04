@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
+import java.util.List;
 
 @Controller
 public class UserController {
@@ -58,5 +59,14 @@ public class UserController {
     public String recover(Model model){
         model.addAttribute("user", new User());
         return "users";
+    }
+
+    @Retryable(maxAttempts = 10, value = RuntimeException.class, backoff = @Backoff(delay = 10, multiplier = 2))
+    @RequestMapping(value = "showAllGuests", method = RequestMethod.GET)
+    public String listGuests(Model model){
+        model.addAttribute("userIp", new UserIp());
+        List<UserIp> list =  this.userIpService.getAllUsers();
+        model.addAttribute("listGuests", this.userIpService.getAllUsers());
+        return "guests";
     }
 }

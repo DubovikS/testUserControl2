@@ -31,7 +31,7 @@ public class UserIpImpl implements UserIpDao{
     @Override
     public List<UserIp> getAllUsers() {
         Session session = this.sessionFactory.getCurrentSession();
-        List<UserIp> userList = session.createQuery("from User").list();
+        List<UserIp> userList = session.createQuery("from UserIp").list();
 
         return userList;
     }

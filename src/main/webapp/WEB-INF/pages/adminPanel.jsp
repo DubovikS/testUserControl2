@@ -183,6 +183,8 @@
     </c:forEach>
   </table>
 </c:if>
+<a href="/showAllGuests">Show all Guests</a>
+<br/>
 <a href="/users">Back</a>
 </body>
 </html>
