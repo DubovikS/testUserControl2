@@ -44,6 +44,7 @@
         <property name="annotatedClasses">
             <list>
                 <value>com.springapp.model.User</value>
+                <value>com.springapp.model.UserIp</value>
             </list>
         </property>
         <property name="hibernateProperties">
@@ -64,6 +65,14 @@
 
     <bean id="userService" class="com.springapp.service.UserServiceImpl">
         <property name="userDao" ref="userDao"/>
+    </bean>
+
+    <bean id="userIpDao" class="com.springapp.dao.UserIpImpl">
+        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
+    </bean>
+
+    <bean id="userIpService" class="com.springapp.service.UserIpServiceImpl">
+        <property name="userDao" ref="userIpDao"/>
     </bean>
 
 
