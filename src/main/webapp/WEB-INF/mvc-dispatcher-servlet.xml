@@ -44,7 +44,6 @@
         <property name="annotatedClasses">
             <list>
                 <value>com.springapp.model.User</value>
-                <value>com.springapp.model.HallOpera</value>
             </list>
         </property>
         <property name="hibernateProperties">
@@ -67,13 +66,7 @@
         <property name="userDao" ref="userDao"/>
     </bean>
 
-    <bean id="hallOperaDao" class="com.springapp.dao.HallDaoImpl">
-        <property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory"/>
-    </bean>
 
-    <bean id="hallOperaService" class="com.springapp.service.HallOperaServiceImpl">
-        <property name="hallOperaperaDao" ref="hallOperaDao"/>
-    </bean>
 
     <context:component-scan base-package="com.springapp"/>
     <tx:annotation-driven transaction-manager="transactionManager"/>
