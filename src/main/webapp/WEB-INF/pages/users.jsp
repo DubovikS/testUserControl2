@@ -125,6 +125,7 @@
 </c:if>
   <br/>
   <a href="arabicToRoman">Arabic to Roman(Test)</a>
+  <a href="/upload">Upload</a>
 </div>
 </body>
 </html>

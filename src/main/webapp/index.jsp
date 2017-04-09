@@ -7,5 +7,6 @@
 <body>
 <jsp:forward page="/users"></jsp:forward>
 <a href="<c:url value="/users"/>" target="_blank">Books list</a>
+
 </body>
 </html>
